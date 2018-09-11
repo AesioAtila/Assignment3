@@ -8,7 +8,7 @@ let tasks = []
 const limit = parseInt(process.argv[2], 10) || 1000
 mongodb.MongoClient.connect(url, { useNewUrlParser: true }, (error, db) => {
   if (error) return process.exit(1)
-	  var dbo = db.db("mydb");
+	  var dbo = db.db("edx-course-db");
   customers.forEach((customer, index, list) => {
     customers[index] = Object.assign(customer, customerAddresses[index])
 
